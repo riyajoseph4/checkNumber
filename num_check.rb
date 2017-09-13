@@ -1,0 +1,26 @@
+class NumCheck
+  
+  def method_missing(method_name, *args, &block)
+     @numString = method_name[/\d+/].to_s 
+    
+     @lengthOfNum = @numString.length
+    
+     if @lengthOfNum == 11
+        if @numString.start_with? '0484' 
+           return "valid number"
+        else
+           return "invalid number"
+        end
+        
+     elsif @lengthOfNum == 10
+        if (@numString.start_with? '7')||(@numString.start_with? '8' )|| 
+                                              (@numString.start_with? '9')
+           return "valid number"
+        else
+           return  "invalid number"
+        end
+    else
+        return "invalid number"        
+    end            
+   end
+end
