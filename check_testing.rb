@@ -12,6 +12,7 @@ class CallTest < Minitest::Test
     @num4 = NumCheck.new.call_12321
     @num5 = NumCheck.new.call_8547810845_call 
     @num6 = NumCheck.new.call_call_8547810845
+
   end
 
   def test_call_898989898989
@@ -31,11 +32,11 @@ class CallTest < Minitest::Test
   end
 
   def test_call_8547810845_call  
-    assert_equal "valid number", @num5
+    assert_equal "invalid number", @num5
   end 
 
   def test_call_call_8547810845  
-    assert_equal "valid number", @num6
+    assert_equal "invalid number", @num6
   end
 
 end
